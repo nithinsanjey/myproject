@@ -61,7 +61,10 @@ $(document).ready(function(){
         			mycount=mycount+1;
         			console.log("processing... Please wait "+myid+" "+mycount);
         		});
-        			console.log("Hello World-----------------------------------------------------------------");
+        				
+        			console.log("Hello World & calling func-----------------------------------------------------------------");
+        			requestTwo();
+        			console.log("Hello World & called func-----------------------------------------------------------------");
         		//console.log(content);
         		//content=content+"</div>";
         		//$("#content").replaceWith(content);
@@ -70,7 +73,8 @@ $(document).ready(function(){
         		console.log("Error executed at ajax");
         	}
 		});//  AJAX ends here ---------------------------------------------------------------------------------------------------------------------
-		/*console.log("1Ajax ends here=----------------------------------------------------------------------------");
+		function requestTwo(){
+		console.log("1Ajax ends here=----------------------------------------------------------------------------");
 		var initUrl1="https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name="+$("#name").val()+"&count=200&truncated=false&max_id="+myid;
 		var nonce1=exports.nonce(32);
 		var ts1=Math.floor(new Date().getTime()/1000);
@@ -129,6 +133,8 @@ $(document).ready(function(){
         	}
 		});//  AJAX ends here ---------------------------------------------------------------------------------------------------------------------
 		console.log("2222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222");
-		// */
+		// */	
+		}
+		
 	});
 });
