@@ -9,10 +9,10 @@ $(document).ready(function(){
 			return false;
 		}
 		var initUrl="https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name="+$("#name").val()+"&count=200&truncated=false&exclude_replies=true";
-		var consumerKey="tdp9qTeoh2zsilPnRiwgXHG9y";
-		var consumerSecret="auFbADQ3XeFkVwxn7E6Qx5Y4aOrndCmTMfgslmPHuWA3Lg2Xhy";
-		var accessToken="1222227554-LeJsVW3qO6TdxmXBghb2mxMThjM0U0KcUNW0wnJ";
-		var accessTokenSecret="YozXDcwnT4qj00VrLMSc5dRF4pYvz6mFkUDEFOpXpNX2Z";
+		var consumerKey="";
+		var consumerSecret="";
+		var accessToken="";
+		var accessTokenSecret="";
 		var nonce=exports.nonce(32);
 		var ts=Math.floor(new Date().getTime()/1000);
 		var timestamp=ts.toString();
