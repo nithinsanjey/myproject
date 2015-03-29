@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	var myid=0;
 	var mycount=1;
+	console.log("Welcome to js in assess time");
 	$("#submit").click(function(){
 		if($("#name").val().length<1)
 		{
