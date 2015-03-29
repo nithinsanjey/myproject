@@ -60,8 +60,8 @@ $(document).ready(function(){
         			mycount=mycount+1;
         			console.log("processing... Please wait "+myid+" "+mycount);
         		});
-        		//content=content+"</div>";
-        		//$("#content").replaceWith(content);
+        		content=content+"</div>";
+        		$("#content").replaceWith(content);
         	},
         	error:function(){
         		console.log("Error executed at ajax");
