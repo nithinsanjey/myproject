@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	var myid=0;
 	$("#submit").click(function(){
 		if($("#name").val().length<1)
 		{
@@ -39,7 +40,7 @@ $(document).ready(function(){
 		var sig=exports.getParameter(message.parameters,"oauth_signature")+"=";
 		console.log("Non-Encoded signature : "+sig);
 		var encodedSig=exports.percentEncode(sig);
-		console.log("Finally Yo Yo honey sigggggggggggg : "+encodedSig);
+		//console.log("Finally Yo Yo honey sigggggggggggg : "+encodedSig);
 		//console.log("Value "+ts);
 		var content="<div id='content'>";
 		$.ajax({
@@ -54,7 +55,8 @@ $(document).ready(function(){
         		$.each(data,function(){
         			content=content+"<p>"+this['text']+"</p>";
         			//console.log(" "+content);
-        			console.log("processing... Please wait");
+        			myid=this['id'];
+        			console.log("processing... Please wait"+myid);
         		});
         		content=content+"</div>";
         		$("#content").replaceWith(content);
@@ -62,7 +64,7 @@ $(document).ready(function(){
         	error:function(){
         		console.log("Error executed at ajax");
         	}
-		});
+		});//  AJAX ends here ---------------------------------------------------------------------------------------------------------------------
 
 	});
 });
