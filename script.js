@@ -55,20 +55,21 @@ $(document).ready(function(){
         		//console.log("Success Dude "+data);
         		$.each(data,function(){
         			content=content+"<p>"+this['text']+"</p>";
+        			$("#content").append("<p>"+this['text']+"</p>");
         			//console.log(" "+content);
         			myid=this['id'];
         			mycount=mycount+1;
         			console.log("processing... Please wait "+myid+" "+mycount);
         		});
-        		console.log(content);
-        		content=content+"</div>";
-        		$("#content").replaceWith(content);
+        		//console.log(content);
+        		//content=content+"</div>";
+        		//$("#content").replaceWith(content);
         	},
         	error:function(){
         		console.log("Error executed at ajax");
         	}
 		});//  AJAX ends here ---------------------------------------------------------------------------------------------------------------------
-
+		console.log("Ajax ends here");
 		/*var initUrl1="https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name="+$("#name").val()+"&count=200&truncated=false&max_id="+myid;
 		var nonce1=exports.nonce(32);
 		var ts1=Math.floor(new Date().getTime()/1000);
