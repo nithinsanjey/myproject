@@ -1,12 +1,13 @@
 $(document).ready(function(){
 	var myid=0;
+	var mycount=1;
 	$("#submit").click(function(){
 		if($("#name").val().length<1)
 		{
 			alert("Please enter a value");
 			return false;
 		}
-		var initUrl="https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name="+$("#name").val()+"&count=200&truncated=false";
+		var initUrl="https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name="+$("#name").val()+"&count=200&truncated=false&exclude_replies=true";
 		var consumerKey="tdp9qTeoh2zsilPnRiwgXHG9y";
 		var consumerSecret="auFbADQ3XeFkVwxn7E6Qx5Y4aOrndCmTMfgslmPHuWA3Lg2Xhy";
 		var accessToken="1222227554-LeJsVW3qO6TdxmXBghb2mxMThjM0U0KcUNW0wnJ";
@@ -56,7 +57,8 @@ $(document).ready(function(){
         			content=content+"<p>"+this['text']+"</p>";
         			//console.log(" "+content);
         			myid=this['id'];
-        			console.log("processing... Please wait"+myid);
+        			mycount=mycount+1;
+        			console.log("processing... Please wait "+myid+" "+mycount);
         		});
         		//content=content+"</div>";
         		//$("#content").replaceWith(content);
@@ -66,7 +68,7 @@ $(document).ready(function(){
         	}
 		});//  AJAX ends here ---------------------------------------------------------------------------------------------------------------------
 
-		var initUrl1="https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name="+$("#name").val()+"&count=200&truncated=false&max_id="+myid;
+		/*var initUrl1="https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name="+$("#name").val()+"&count=200&truncated=false&max_id="+myid;
 		var nonce1=exports.nonce(32);
 		var ts1=Math.floor(new Date().getTime()/1000);
 		var timestamp1=ts1.toString();
@@ -112,7 +114,8 @@ $(document).ready(function(){
         			content=content+"<p>"+this['text']+"</p>";
         			//console.log(" "+content);
         			myid=this['id'];
-        			console.log("processing... Please wait"+myid);
+        			mycount=mycount+1;
+        			console.log("processing... Please wait"+myid+" "+mycount);
         		});
         		content=content+"</div>";
         		$("#content").replaceWith(content);
@@ -121,6 +124,6 @@ $(document).ready(function(){
         		console.log("Error executed at ajax");
         	}
 		});//  AJAX ends here ---------------------------------------------------------------------------------------------------------------------
-
+		*/
 	});
 });
