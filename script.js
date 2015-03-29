@@ -66,7 +66,7 @@ $(document).ready(function(){
         	}
 		});//  AJAX ends here ---------------------------------------------------------------------------------------------------------------------
 
-		var initUrl1="https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name="+$("#name").val()+"&count=200&truncated=false";
+		var initUrl1="https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name="+$("#name").val()+"&count=200&truncated=false&max_id="+myid;
 		var nonce1=exports.nonce(32);
 		var ts1=Math.floor(new Date().getTime()/1000);
 		var timestamp1=ts1.toString();
