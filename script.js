@@ -60,6 +60,7 @@ $(document).ready(function(){
         			mycount=mycount+1;
         			console.log("processing... Please wait "+myid+" "+mycount);
         		});
+        		console.log(content);
         		content=content+"</div>";
         		$("#content").replaceWith(content);
         	},
