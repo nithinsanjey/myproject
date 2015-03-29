@@ -7,7 +7,7 @@ $(document).ready(function(){
 			alert("Please enter a value");
 			return false;
 		}
-		var initUrl="https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name="+$("#name").val()+"&count=200&truncated=false&exclude_replies=true";
+		var initUrl="https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name="+$("#name").val()+"&count=200&truncated=false&exclude_replies=true&max_id=571680829182591000";
 		var consumerKey="tdp9qTeoh2zsilPnRiwgXHG9y";
 		var consumerSecret="auFbADQ3XeFkVwxn7E6Qx5Y4aOrndCmTMfgslmPHuWA3Lg2Xhy";
 		var accessToken="1222227554-LeJsVW3qO6TdxmXBghb2mxMThjM0U0KcUNW0wnJ";
